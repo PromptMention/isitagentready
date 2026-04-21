@@ -1,0 +1,10 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "isitagentready-api",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-04-21",
+  "workers_dev": true,
+  "observability": {
+    "enabled": true
+  }
+}

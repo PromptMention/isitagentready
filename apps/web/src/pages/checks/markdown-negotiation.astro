@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+---
+<BaseLayout
+  title="Markdown Negotiation For Agents | Is It Agent Ready?"
+  description="Learn how to return markdown from HTML pages when agents request `Accept: text/markdown`, reducing tokens and improving agent comprehension."
+  canonical="https://isitagentready.com/checks/markdown-negotiation"
+>
+  <section class="card" style="padding: 28px;">
+    <h1 class="section-title">Markdown negotiation</h1>
+    <p class="muted">
+      Agent-ready websites should return markdown when an AI system requests `Accept: text/markdown`. This reduces token cost and helps agents extract the actual content instead of parsing dense HTML.
+    </p>
+    <h2>What a passing result looks like</h2>
+    <pre>{`GET / HTTP/1.1
+Accept: text/markdown
+
+HTTP/1.1 200 OK
+Content-Type: text/markdown; charset=utf-8`}</pre>
+    <h2>Implementation guidance</h2>
+    <ul class="clean">
+      <li>Keep HTML as the default for browsers.</li>
+      <li>Return markdown only when the request explicitly asks for it.</li>
+      <li>Make sure `Content-Type` is actually `text/markdown`.</li>
+    </ul>
+    <p class="muted">
+      Reference:
+      <a class="link" href="https://developers.cloudflare.com/fundamentals/reference/markdown-for-agents/" target="_blank" rel="noreferrer"> Markdown for Agents</a>
+    </p>
+  </section>
+</BaseLayout>

@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+---
+<BaseLayout
+  title="MCP Server Card Guide | Is It Agent Ready?"
+  description="Publish an MCP server card so agents can discover your MCP tools, transport endpoint, authentication model, and capabilities."
+  canonical="https://isitagentready.com/checks/mcp-server-card"
+>
+  <section class="card" style="padding: 28px;">
+    <h1 class="section-title">MCP server card</h1>
+    <p class="muted">
+      An MCP server card gives agents a structured way to understand your MCP endpoint before connecting. It should describe your server metadata, transport, authentication, and available tools.
+    </p>
+    <pre>{`{
+  "serverInfo": {
+    "name": "example-mcp",
+    "version": "1.0.0"
+  },
+  "transport": {
+    "type": "streamable-http",
+    "endpoint": "/mcp"
+  },
+  "authentication": {
+    "required": false
+  }
+}`}</pre>
+    <p class="muted">
+      Draft reference:
+      <a class="link" href="https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2127" target="_blank" rel="noreferrer"> MCP Server Card</a>
+    </p>
+  </section>
+</BaseLayout>

@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import ScanForm from '../components/ScanForm'
+---
+<BaseLayout
+  title="Is It Agent Ready? | Open-source AI agent readiness scanner"
+  description="Scan any website for AI agent readiness across robots.txt, sitemaps, markdown negotiation, API catalogs, MCP server cards, agent skills, and related standards."
+  canonical="https://isitagentready.com/"
+>
+  <section class="split" style="align-items: start; margin-bottom: 32px;">
+    <div>
+      <span class="pill">Open-source scanner by PromptMention</span>
+      <h1 style="font-size: clamp(3rem, 8vw, 5.4rem); line-height: 0.95; margin: 18px 0 18px; max-width: 9ch;">
+        Is It Agent Ready?
+      </h1>
+      <p class="muted" style="font-size: 1.15rem; max-width: 56ch; line-height: 1.7;">
+        Run an AI agent readiness audit against any website. Check discoverability, markdown negotiation,
+        bot access control, API discovery, MCP metadata, and agent skills support in one report.
+      </p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 22px;">
+        <span class="pill">robots.txt</span>
+        <span class="pill">Markdown for Agents</span>
+        <span class="pill">API Catalog</span>
+        <span class="pill">MCP Server Card</span>
+        <span class="pill">Agent Skills</span>
+      </div>
+    </div>
+    <div class="card" style="padding: 24px;">
+      <div class="muted" style="font-size: 14px; margin-bottom: 10px;">What this scanner checks</div>
+      <div class="grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px;">
+        <div class="card" style="padding: 16px; border-radius: 18px;">
+          <strong>Discoverability</strong>
+          <p class="muted">robots.txt, sitemap, link headers</p>
+        </div>
+        <div class="card" style="padding: 16px; border-radius: 18px;">
+          <strong>Content</strong>
+          <p class="muted">Markdown negotiation</p>
+        </div>
+        <div class="card" style="padding: 16px; border-radius: 18px;">
+          <strong>Bot Control</strong>
+          <p class="muted">AI bot rules, Content Signals</p>
+        </div>
+        <div class="card" style="padding: 16px; border-radius: 18px;">
+          <strong>Protocol Discovery</strong>
+          <p class="muted">OAuth, API catalog, MCP, skills</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <ScanForm client:load />
+
+  <section class="card" style="padding: 24px; margin-top: 32px;">
+    <h2 class="section-title">How to make a site agent-ready</h2>
+    <p class="muted" style="line-height: 1.7; max-width: 72ch;">
+      Most sites already have a basic web presence, but very few publish the technical metadata that AI agents need.
+      Start with a valid <a class="link" href="/checks/robots-txt">robots.txt</a>, then add
+      <a class="link" href="/checks/markdown-negotiation"> markdown negotiation</a>,
+      <a class="link" href="/checks/mcp-server-card"> MCP discovery</a>, and
+      <a class="link" href="/checks/agent-skills"> agent skills discovery</a> if your site exposes tools or APIs.
+    </p>
+    <p class="muted">
+      Browse the <a class="link" href="/docs">documentation</a> to understand each check in detail.
+    </p>
+  </section>
+
+  <section class="card" style="padding: 24px; margin-top: 32px;">
+    <h2 style="margin-top: 0;">Built by PromptMention</h2>
+    <p class="muted" style="line-height: 1.7;">
+      This open-source scanner is maintained by PromptMention. Use it as a free public audit tool,
+      self-host it on Cloudflare, or adapt it for your own agent-readiness workflows.
+    </p>
+  </section>
+</BaseLayout>

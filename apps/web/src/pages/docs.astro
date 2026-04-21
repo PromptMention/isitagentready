@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+---
+<BaseLayout
+  title="Agent Readiness Docs | Is It Agent Ready?"
+  description="Learn what agent readiness means for websites and how to implement robots.txt AI directives, markdown negotiation, API discovery, MCP server cards, and agent skills."
+  canonical="https://isitagentready.com/docs"
+>
+  <section class="card" style="padding: 28px; margin-bottom: 24px;">
+    <h1 class="section-title">Agent readiness documentation</h1>
+    <p class="muted">
+      This project explains and audits the technical standards that help AI agents discover, read, authenticate with,
+      and interact with websites. Use these pages to improve implementation details after a scan.
+    </p>
+  </section>
+
+  <section class="grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+    <a class="card link" href="/checks/robots-txt" style="padding: 22px; display: block; text-decoration: none;">
+      <strong>robots.txt for AI agents</strong>
+      <p class="muted">Crawl directives, sitemap discovery, and AI bot policy.</p>
+    </a>
+    <a class="card link" href="/checks/markdown-negotiation" style="padding: 22px; display: block; text-decoration: none;">
+      <strong>Markdown negotiation</strong>
+      <p class="muted">Serve markdown to agents using `Accept: text/markdown`.</p>
+    </a>
+    <a class="card link" href="/checks/mcp-server-card" style="padding: 22px; display: block; text-decoration: none;">
+      <strong>MCP server card</strong>
+      <p class="muted">Expose tools and transport details through a well-known path.</p>
+    </a>
+    <a class="card link" href="/checks/agent-skills" style="padding: 22px; display: block; text-decoration: none;">
+      <strong>Agent skills discovery</strong>
+      <p class="muted">Publish a skill index for coding agents and assistants.</p>
+    </a>
+  </section>
+</BaseLayout>

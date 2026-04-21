@@ -1,0 +1,20 @@
+{
+  "name": "@isitagentready/api",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "build": "wrangler deploy --dry-run",
+    "check": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@isitagentready/core": "workspace:*",
+    "@isitagentready/shared": "workspace:*",
+    "hono": "^4.10.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260415.0",
+    "typescript": "^5.9.2",
+    "wrangler": "^4.83.0"
+  }
+}

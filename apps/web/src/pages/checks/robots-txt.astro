@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+---
+<BaseLayout
+  title="robots.txt For AI Agents | Is It Agent Ready?"
+  description="Learn how to configure robots.txt for AI agents, sitemap discovery, and crawler-specific rules like GPTBot, Claude-Web, and Google-Extended."
+  canonical="https://isitagentready.com/checks/robots-txt"
+>
+  <section class="card" style="padding: 28px;">
+    <h1 class="section-title">robots.txt for AI agents</h1>
+    <p class="muted">
+      A valid `robots.txt` file remains the first discovery surface for search crawlers and AI agents. It should declare crawl rules,
+      point to your sitemap, and optionally include AI-specific user-agent directives.
+    </p>
+    <h2>Why it matters</h2>
+    <ul class="clean">
+      <li>Helps agents find important content quickly.</li>
+      <li>Lets you define AI-specific access policy instead of relying only on wildcard rules.</li>
+      <li>Acts as the normal place to advertise sitemap URLs.</li>
+    </ul>
+    <h2>Example</h2>
+    <pre>{`User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+Content-Signal: ai-train=no, search=yes, ai-input=yes
+Sitemap: https://example.com/sitemap.xml`}</pre>
+    <p class="muted">
+      Related docs:
+      <a class="link" href="https://www.rfc-editor.org/rfc/rfc9309" target="_blank" rel="noreferrer"> RFC 9309</a>
+      {' · '}
+      <a class="link" href="https://developers.cloudflare.com/ai-crawl-control/" target="_blank" rel="noreferrer">Cloudflare AI Crawl Control</a>
+    </p>
+  </section>
+</BaseLayout>

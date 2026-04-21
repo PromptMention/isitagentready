@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+---
+<BaseLayout
+  title="Agent Skills Discovery Guide | Is It Agent Ready?"
+  description="Learn how to publish an Agent Skills discovery index at `/.well-known/agent-skills/index.json` so agents can discover and load your skills."
+  canonical="https://isitagentready.com/checks/agent-skills"
+>
+  <section class="card" style="padding: 28px;">
+    <h1 class="section-title">Agent skills discovery</h1>
+    <p class="muted">
+      Agent Skills discovery lets websites and platforms advertise reusable skills for coding agents and assistants. A published index points to the available skill artifacts and their digests.
+    </p>
+    <pre>{`{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "code-review",
+      "type": "skill-md",
+      "description": "Review code for bugs and regressions.",
+      "url": "/.well-known/agent-skills/code-review/SKILL.md",
+      "digest": "sha256:..."
+    }
+  ]
+}`}</pre>
+    <p class="muted">
+      References:
+      <a class="link" href="https://github.com/cloudflare/agent-skills-discovery-rfc" target="_blank" rel="noreferrer"> Agent Skills Discovery RFC</a>
+      {' · '}
+      <a class="link" href="https://agentskills.io/" target="_blank" rel="noreferrer">Agent Skills</a>
+    </p>
+  </section>
+</BaseLayout>
