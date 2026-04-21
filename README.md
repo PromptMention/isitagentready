@@ -16,7 +16,9 @@ It checks whether a site supports emerging AI agent standards like:
 - MCP server cards
 - Agent Skills discovery
 
-Built and maintained by PromptMention.
+Built and maintained by [PromptMention](https://promptmention.com).
+
+PromptMention helps brands monitor and improve AI visibility across emerging search and agent-driven discovery surfaces.
 
 ## Stack
 
